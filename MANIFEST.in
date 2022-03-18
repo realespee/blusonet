@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include blusonet *.css
+recursive-include blusonet *.csv
+recursive-include blusonet *.html
+recursive-include blusonet *.ico
+recursive-include blusonet *.js
+recursive-include blusonet *.json
+recursive-include blusonet *.md
+recursive-include blusonet *.png
+recursive-include blusonet *.py
+recursive-include blusonet *.svg
+recursive-include blusonet *.txt
+recursive-exclude blusonet *.pyc
