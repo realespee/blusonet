@@ -1,5 +1,5 @@
 frappe.ui.form.on("Employee", {
-    refresh: function (frm) {
+    on_load: function (frm) {
         console.log(frm)
     }
 });
