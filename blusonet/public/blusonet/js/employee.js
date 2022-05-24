@@ -1,5 +1,8 @@
 frappe.ui.form.on("Employee", {
-    on_load: function (frm) {
+    company: function (frm) {
+
+        console.log(frm)
+        
         if (frm.doc.company == "BluSonet") {
             frm.pan_number.label = "TIN"
         }
