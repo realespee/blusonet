@@ -9,6 +9,12 @@ app_color = "blue"
 app_email = "wanyamasp@gmail.com"
 app_license = "MIT"
 
+
+# FIXTURES
+fixtures = [
+	"Custom Field"
+]
+
 # Includes in <head>
 # ------------------
 
