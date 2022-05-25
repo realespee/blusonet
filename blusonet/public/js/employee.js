@@ -1,5 +1,5 @@
 frappe.ui.form.on("Employee", {
-    refresh(frm) {
+    company : function(frm) {
 
         console.log(frm)
         let company = frm.doc.company
