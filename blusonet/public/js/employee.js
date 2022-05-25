@@ -7,6 +7,7 @@ frappe.ui.form.on("Employee", {
         if ((company == "BluSonet") || (company == "Blu-UnitedStates")) {
             // change fieldname from PAN Number to TIN
             frm.set_df_property("pan_number", "label", "TIN Number")
+            frm.refresh_field("pan_number")
         }
     }
 });
