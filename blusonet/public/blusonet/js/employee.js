@@ -1,16 +1,12 @@
 frappe.ui.form.on("Employee", {
-    on_load(frm) {
+    refresh(frm) {
 
         console.log(frm)
+        let company = frm.doc.company
 
-        if (frm.doc.company == "BluSonet") {
-            frm.pan_number.label = "TIN"
-        }
-        else if(frm.doc.company == "Blu-UnitedStates") {
-            frm.pan_number.label = "TIN Number"
-        }
-        else{
-            frm.pan_number.label = "PAN Number"
+        if ((company == "BluSonet") || (company == "Blu-UnitedStates")) {
+            // change fieldname from PAN Number to TIN
+            frm.set_df_property("pan_number", "label", "TIN Number")
         }
     }
 });
