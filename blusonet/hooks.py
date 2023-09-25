@@ -37,7 +37,10 @@ fixtures = [
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = {"Employee" : "public/js/employee.js"}
+doctype_js = {
+    "Employee" : "public/js/employee.js",
+	 "Sales Invoice" : "custom_script/sales_invoice/sales_invoice.js",
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -93,9 +96,10 @@ doctype_js = {"Employee" : "public/js/employee.js"}
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	# "ToDo": "custom_app.overrides.CustomToDo"
+	'Sales Invoice': 'blusonet.custom_script.overrides.sales_invoice.custom_sales_invoice.CustomSalesInvoice'
+}
 
 # Document Events
 # ---------------
@@ -108,6 +112,12 @@ doctype_js = {"Employee" : "public/js/employee.js"}
 # 		"on_trash": "method"
 # 	}
 # }
+
+doc_events = {
+    "Sales Invoice": {
+        "before_submit": "blusonet.crud_events.before_submit",
+    }
+}
 
 # Scheduled Tasks
 # ---------------
