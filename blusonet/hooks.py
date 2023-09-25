@@ -113,12 +113,6 @@ override_doctype_class = {
 # 	}
 # }
 
-doc_events = {
-    "Sales Invoice": {
-        "before_submit": "blusonet.crud_events.before_submit",
-    }
-}
-
 # Scheduled Tasks
 # ---------------
 
